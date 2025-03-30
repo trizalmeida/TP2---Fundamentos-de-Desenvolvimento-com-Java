@@ -1,9 +1,8 @@
 import java.util.Scanner;
-import java.util.Random;
 
 // Exercício 1: Cadastro de Usuário Completo
-class CadastroUsuario {
-    public void executar() {
+public class CadastroUsuario {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nome completo: ");
         String nome = scanner.nextLine();
@@ -27,8 +26,8 @@ class CadastroUsuario {
 }
 
 // Exercício 2: Calculadora de Média de Notas
-class CalculadoraMedia {
-    public void executar() {
+public class CalculadoraMedia {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double soma = 0;
         for (int i = 1; i <= 4; i++) {
@@ -44,8 +43,8 @@ class CalculadoraMedia {
 }
 
 // Exercício 3: Conversor de Moedas
-class ConversorMoedas {
-    public void executar() {
+public class ConversorMoedas {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Valor em reais: ");
         double reais = scanner.nextDouble();
@@ -58,8 +57,8 @@ class ConversorMoedas {
 }
 
 // Exercício 4: Calculadora de Idade em Dias
-class CalculadoraIdade {
-    public void executar() {
+public class CalculadoraIdade {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ano de nascimento: ");
         int ano = scanner.nextInt();
@@ -70,32 +69,5 @@ class CalculadoraIdade {
         int anosVividos = 2024 - ano;
         int diasVividos = anosVividos * 365 + (anosVividos / 4);
         System.out.println("Idade em dias: " + diasVividos);
-    }
-}
-
-// Classe principal para execução
-public class TestePerformance {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("\nEscolha o exercício para executar:");
-            System.out.println("1 - Cadastro de Usuário");
-            System.out.println("2 - Calculadora de Média");
-            System.out.println("3 - Conversor de Moedas");
-            System.out.println("4 - Calculadora de Idade");
-            System.out.println("0 - Sair");
-            System.out.print("Opção: ");
-            int opcao = scanner.nextInt();
-            
-            if (opcao == 0) break;
-            switch (opcao) {
-                case 1: new CadastroUsuario().executar(); break;
-                case 2: new CalculadoraMedia().executar(); break;
-                case 3: new ConversorMoedas().executar(); break;
-                case 4: new CalculadoraIdade().executar(); break;
-                default: System.out.println("Opção inválida");
-            }
-        }
-        scanner.close();
     }
 }
