@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+// Exercício 5: Calculadora de Descontos Progressivos
+class CalculadoraDescontos {
+    public void executar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Valor da compra: ");
+        double valor = scanner.nextDouble();
+        double desconto = (valor > 1000) ? 0.10 : (valor >= 500 ? 0.05 : 0);
+        double valorFinal = valor * (1 - desconto);
+        System.out.printf("Desconto: %.2f%%\n", desconto * 100);
+        System.out.printf("Valor final: R$ %.2f\n", valorFinal);
+    }
+}
+
+// Exercício 6: Verificador de Ano Bissexto
+class VerificadorAnoBissexto {
+    public void executar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite um ano: ");
+        int ano = scanner.nextInt();
+        if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+            System.out.println("O ano " + ano + " é bissexto.");
+        } else {
+            System.out.println("O ano " + ano + " não é bissexto.");
+        }
+    }
+}
+
+// Exercício 7: Calculadora de Imposto de Renda
+class CalculadoraImpostoRenda {
+    public void executar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Salário bruto anual: ");
+        double salario = scanner.nextDouble();
+        double imposto = 0;
+        
+        if (salario > 45000) {
+            imposto = salario * 0.22;
+        } else if (salario > 30000) {
+            imposto = salario * 0.15;
+        } else if (salario > 20000) {
+            imposto = salario * 0.08;
+        }
+        
+        System.out.printf("Imposto devido: R$ %.2f\n", imposto);
+        System.out.printf("Salário líquido: R$ %.2f\n", salario - imposto);
+    }
+}
+
+// Exercício 8: Classificação de Triângulos
+class ClassificacaoTriangulos {
+    public void executar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Lado 1: ");
+        int a = scanner.nextInt();
+        System.out.print("Lado 2: ");
+        int b = scanner.nextInt();
+        System.out.print("Lado 3: ");
+        int c = scanner.nextInt();
+        
+        if (a + b > c && a + c > b && b + c > a) {
+            if (a == b && b == c) {
+                System.out.println("Triângulo Equilátero");
+            } else if (a == b || a == c || b == c) {
+                System.out.println("Triângulo Isósceles");
+            } else {
+                System.out.println("Triângulo Escaleno");
+            }
+        } else {
+            System.out.println("As medidas informadas não formam um triângulo.");
+        }
+    }
+}
