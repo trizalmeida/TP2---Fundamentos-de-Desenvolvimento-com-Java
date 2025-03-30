@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+// Exercício 9: Tabuada
+class Tabuada {
+    public void executar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite um número para a tabuada: ");
+        int numero = scanner.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
+    }
+}
+
+// Exercício 10: Soma de Números Pares
+class SomaNumerosPares {
+    public void executar() {
+        int soma = 0;
+        for (int i = 2; i <= 100; i += 2) {
+            soma += i;
+        }
+        System.out.println("Soma dos números pares de 1 a 100: " + soma);
+    }
+}
+
+// Exercício 11: Contagem Regressiva
+class ContagemRegressiva {
+    public void executar() {
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("Fim da contagem!");
+    }
+}
+
+// Exercício 12: Verificação de Número Primo
+class VerificacaoNumeroPrimo {
+    public void executar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite um número: ");
+        int numero = scanner.nextInt();
+        boolean primo = true;
+        if (numero <= 1) {
+            primo = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % i == 0) {
+                    primo = false;
+                    break;
+                }
+            }
+        }
+        System.out.println(numero + (primo ? " é primo." : " não é primo."));
+    }
+}
