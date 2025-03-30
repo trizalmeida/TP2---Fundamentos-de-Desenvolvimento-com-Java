@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 // Exercício 5: Calculadora de Descontos Progressivos
-class CalculadoraDescontos {
-    public void executar() {
+public class CalculadoraDescontos {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Valor da compra: ");
         double valor = scanner.nextDouble();
@@ -14,8 +14,8 @@ class CalculadoraDescontos {
 }
 
 // Exercício 6: Verificador de Ano Bissexto
-class VerificadorAnoBissexto {
-    public void executar() {
+public class VerificadorAnoBissexto {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite um ano: ");
         int ano = scanner.nextInt();
@@ -28,8 +28,8 @@ class VerificadorAnoBissexto {
 }
 
 // Exercício 7: Calculadora de Imposto de Renda
-class CalculadoraImpostoRenda {
-    public void executar() {
+public class CalculadoraImpostoRenda {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Salário bruto anual: ");
         double salario = scanner.nextDouble();
@@ -49,8 +49,8 @@ class CalculadoraImpostoRenda {
 }
 
 // Exercício 8: Classificação de Triângulos
-class ClassificacaoTriangulos {
-    public void executar() {
+public class ClassificacaoTriangulos {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Lado 1: ");
         int a = scanner.nextInt();
