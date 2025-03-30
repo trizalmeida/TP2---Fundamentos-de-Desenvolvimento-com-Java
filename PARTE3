@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 // Exercício 9: Tabuada
-class Tabuada {
-    public void executar() {
+public class Tabuada {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite um número para a tabuada: ");
         int numero = scanner.nextInt();
@@ -13,8 +13,8 @@ class Tabuada {
 }
 
 // Exercício 10: Soma de Números Pares
-class SomaNumerosPares {
-    public void executar() {
+public class SomaNumerosPares {
+    public static void main(String[] args) {
         int soma = 0;
         for (int i = 2; i <= 100; i += 2) {
             soma += i;
@@ -24,8 +24,8 @@ class SomaNumerosPares {
 }
 
 // Exercício 11: Contagem Regressiva
-class ContagemRegressiva {
-    public void executar() {
+public class ContagemRegressiva {
+    public static void main(String[] args) {
         for (int i = 10; i >= 0; i--) {
             System.out.println(i);
             try {
@@ -39,8 +39,8 @@ class ContagemRegressiva {
 }
 
 // Exercício 12: Verificação de Número Primo
-class VerificacaoNumeroPrimo {
-    public void executar() {
+public class VerificacaoNumeroPrimo {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite um número: ");
         int numero = scanner.nextInt();
@@ -56,5 +56,6 @@ class VerificacaoNumeroPrimo {
             }
         }
         System.out.println(numero + (primo ? " é primo." : " não é primo."));
+        scanner.close();
     }
 }
